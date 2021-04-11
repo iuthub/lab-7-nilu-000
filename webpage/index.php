@@ -11,6 +11,13 @@ include('connection.php');
 	<body>
 		<?php include('header.php'); ?>
 		<!-- Show this part if user is not signed in yet -->
+        <ul>
+            <?php
+            foreach ($users as $user){
+            ?>
+            <li><?=$user['fullname']?></li>
+            <?php } ?>
+        </ul>
 		<div class="twocols">
 			<form action="index.php" method="post" class="twocols_col">
 				<ul class="form">
